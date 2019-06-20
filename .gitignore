@@ -1,0 +1,28 @@
+# tmp files
+tmp/
+temp/
+
+# executable directories
+bin/
+gen/
+out/
+build/
+__pycache__/
+
+# executable files
+*.pyc
+*.exe
+
+# log files
+*.log
+/*.md
+
+# setting files
+.classpath
+.project
+.vscode
+.idle
+
+# rep diy
+/local/share/
+/vim/bundles/*
