@@ -32,6 +32,7 @@ alias ssstart="$HOME/.conda/envs/ssr/bin/sslocal -c $HOME/files/ssr/client.json 
 alias ssstop="$HOME/.conda/envs/ssr/bin/sslocal -d stop --pid-file=$HOME/files/ssr/ssr.pid"
 alias ssrestart="ssstop && ssstart"
 alias g++="g++ -std=c++11"
+alias useradd="useradd -m -s /bin/bash"
 
 umask 023
 
