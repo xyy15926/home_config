@@ -66,7 +66,7 @@ CONDA_CHANGEPS1=false conda activate pysci
 export PYTHONPATH="$PATH:$HOME/Code/pyutils"
 
 # vimruntime setting
-export VIMRUNTIME="$HOME/.vim/runtime"
+export VIMRUNTIME="$HOME/.vim/vim81"
 
 # java settings
 export JAVA_HOME="/opt/jdk"
