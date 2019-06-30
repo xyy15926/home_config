@@ -26,6 +26,21 @@ Host statgpu3
 	User root
 	Port 5102
 
+Host statxfy1
+	HostName 183.174.228.122
+	User xfy
+	Port 5102
+
+Host statxfy2
+	HostName 183.174.228.123
+	User xfy
+	Port 5102
+
+Host statxfy3
+	HostName 183.174.228.124
+	User xfy
+	Port 5102
+
 Host centos1
 	HostName 192.168.31.129
 	User root
