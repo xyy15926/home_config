@@ -91,7 +91,7 @@ set showmatch
 set list
 	"display tab, trail-space, etc(with displayable chars)
 "set listchars=tab:»·,trail:-,precedes:?,extends:?,eol:↩︎
-set listchars=tab:»⋅,trail:-,precedes:?,extends:?,eol:«
+set listchars=tab:»∙,trail:-,precedes:?,extends:?,eol:«
 	"set how those chars display
 	"tab -> <tab>, trail -> <space> at the end of a line
 	"precedes -> left text out of view, extends -> right
@@ -288,8 +288,8 @@ let g:tagbar_sort = 0
 	"sort tags by the sequence order instead of alphabetical
 	"order, which is default
 let g:tagbar_type_markdown = {
-	\'ctagstype' : 'markdown',
-	\'kinds' : [
+	\'ctagstype'	: 'markdown',
+	\'kinds'		: [
 		\'h:Heading_All',
 		\'j:Heading_L2',
 		\'k:Heading_L3',
@@ -303,8 +303,8 @@ let g:tagbar_type_markdown = {
 	"	the relavant tag(after the `:`)
 	"sort: default sorting method
 let g:tagbar_type_rust = {
-	\ 'ctagstype' : 'rust',
-	\ 'kinds' : [
+	\ 'ctagstype'	: 'rust',
+	\ 'kinds'		: [
 		\'T:types,type definitions',
 		\'f:functions,function definitions',
 		\'g:enum,enumeration names',
@@ -315,6 +315,24 @@ let g:tagbar_type_rust = {
 		\'i:impls,trait implementations',
 	\]
 \}
+
+let g:tagbar_type_scala = {
+	\'ctagstype'	: 'scala',
+	\'sro'			: '.',
+	\'kinds'		: [
+		\'T:Types',
+		\'t:Traits',
+		\'o:Objects',
+		\'O:Case objects',
+		\'c:Classes',
+		\'C:Case classes',
+		\'m:Methods',
+		\'V:Constant',
+		\'v:Variables'
+	\],
+	\'sort': 0
+\}
+
 "}}}
 
 " SnipMate setting {{{
