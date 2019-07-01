@@ -44,6 +44,8 @@ onoremap il( :<c-u>normal! F)vi(<cr>
 	"parentheses, or next
 nnoremap <leader><localleader>e  60\|
 	"jump to column 60, which should be the maxium length
+vnoremap <leader>r :<c-u>'<,'>w !xargs -0 tmux set-buffer<cr><cr><C-b>:selectp -t
+" nnoremap <localleader>r :<c-u>'<,'>w !xargs -0 tmux set-buffer<cr>
 
 iabbrev @1 xyy15926@163.com
 iabbrev @2 xyy15926@gmail.com
