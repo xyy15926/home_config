@@ -77,3 +77,6 @@ export CLASSPATH="$CLASSPATH:$JRE_HOME/lib/rt.jar:$JAVA_HOME/lib/dt.jar:$JAVA_HO
 # rust settings
 export PATH="$PATH:$HOME/.cargo/bin"
 
+# sbt settings
+export PATH="$PATH:/opt/sbt/bin"
+
