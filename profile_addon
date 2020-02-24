@@ -27,13 +27,19 @@ alias ls="ls --color --group-directories-first"
 alias ll="ls -l"
 alias la="ls -la"
 alias du="du -h -d 1"
+
+# alias settings for tools
 alias vims="vim -S"
+alias g++="g++ -std=c++11"
+alias useradd="useradd -m -s /bin/bash"
+alias tmux="tmux -S /tmp/tmux"
+
+# shadowsocks config setting
 alias ssstart="$HOME/.conda/envs/ssr/bin/sslocal -c $HOME/files/ssr/client.json -d start --pid-file=$HOME/files/ssr/ssr.pid --log-file=$HOME/files/ssr/ss.log"
 alias ssstop="$HOME/.conda/envs/ssr/bin/sslocal -d stop --pid-file=$HOME/files/ssr/ssr.pid"
 alias ssrestart="ssstop && ssstart"
-alias g++="g++ -std=c++11"
-alias useradd="useradd -m -s /bin/bash"
 
+# set default previledge
 umask 023
 
 # pyenv setting
@@ -63,7 +69,7 @@ unset __conda_setup
 CONDA_CHANGEPS1=false conda activate pysci
 
 # set python package-searching path
-export PYTHONPATH="$PATH:$HOME/Code/pyutils"
+export PYTHONPATH="$HOME/Code/pyutils:$HOME"
 
 # vimruntime setting
 export VIMRUNTIME="$HOME/.vim/vim81"
@@ -71,12 +77,16 @@ export VIMRUNTIME="$HOME/.vim/vim81"
 # java settings
 export JAVA_HOME="/opt/jdk"
 export JRE_HOME="$JAVA_HOME/jre"
-export PATH="$PATH:$JAVA_HOME/bin"
+export PATH="$JAVA_HOME/bin:$PATH"
 export CLASSPATH="$CLASSPATH:$JRE_HOME/lib/rt.jar:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar"
 
 # rust settings
-export PATH="$PATH:$HOME/.cargo/bin"
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # sbt settings
-export PATH="$PATH:/opt/sbt/bin"
+export PATH="/opt/sbt/bin:$PATH"
+
+# jekeyll, with dependencies nodejs
+export PATH="/opt/node/bin:$PATH"
+export PATH="$HOME/.gem/ruby/cur/bin:$PATH"
 
