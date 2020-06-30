@@ -90,3 +90,11 @@ export PATH="/opt/sbt/bin:$PATH"
 export PATH="/opt/node/bin:$PATH"
 export PATH="$HOME/.gem/ruby/cur/bin:$PATH"
 
+# setting for todo.txt ice_cur(crontab doesn't fit for pc)
+if [[ ! -e $HOME/.todo/.ice_recur_completed || \
+		$(date -d $(cat $HOME/.todo/.ice_recur_completed) +%s) \
+		< $(date -d $(date +%x) +%s) ]]; then
+	todo.sh ice_recur
+	date +%Y-%m-%d > $HOME/.todo/.ice_recur_completed
+fi
+

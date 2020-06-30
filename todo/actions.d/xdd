@@ -1,0 +1,28 @@
+#!/usr/bin/env sh
+
+action=$1; shift
+DEFAULT_PRI=E
+
+[ "$action" = "usage" ] && {
+	echo "    $(basename $0) add date, priority and check if unique"
+	echo "	Function:"
+	echo "	1. Check if the task has been added today"
+	echo "	2. Add date and default priority for a task."
+	exit
+}
+
+# sed to clear the characters for terminal to render color
+# $TODO_SH command ls \
+# 	| sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g" \
+# 	| grep -E "^[0-9]+ (\([A-Z]\) )?[0-9\-]{10} ${*}$" && exit
+
+# read the todo_file directly instead of using todo_sh_ls
+cat $TODO_FILE | grep -E "^(\([A-Z]\) )?[0-9\-]{10} ${*}$" && \
+echo "TODO: Tasked already exists" && exit
+
+if $TODO_SH command add $(date +%Y-%m-%d) ${*}; then
+	line=$(cat $TODO_FILE | wc -l)
+	echo $line
+	$TODO_SH command pri $line $DEFAULT_PRI
+fi
+

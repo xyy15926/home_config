@@ -1,0 +1,3 @@
+@2020-06-24 Weekly ; day Saturday - (E) Weekend Starts +fun @home
+@2020-06-24 Weekly ; day Monday - (E) Weekday starts, you have to work +working @office
+
