@@ -1,5 +1,6 @@
-@2020-06-24 Weekly ; day Saturday - (E) Weekend Starts +fun @home
-@2020-06-24 Weekly ; day Monday - (E) Weekday starts, you have to work +working @office
+# @2020-06-24 Weekly ; day Saturday - (E) Weekend Starts +fun @home
+# @2020-06-24 Weekly ; day Monday - (E) Weekday starts, you have to work +working @office
 @2020-10-26 Yearly - (E) 生日，熊佰平
 @2020-12-02 Yearly - (E) 生日，邓凤娇
-@2020-07-09 Monthly ; day_of_month 1, 16 - (D) 备份文件
+@2020-07-09 Monthly ; day_of_month 1, 16 - (D) 备份文件 +monthly @home
+@2020-07-17 Weekly ; day Friday - (E) 周会，注意看周会要求，比如：阅读材料

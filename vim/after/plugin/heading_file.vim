@@ -3,12 +3,12 @@
 "   Name: heading_file.vim
 "   Author: xyy15926
 "   Created at: 2018-05-20 15:30:37
-"   Updated at: 2019-06-26 01:14:13
+"   Updated at: 2020-07-20 12:53:44
 "   Description: vim-scripts for auto-adding file information
 "----------------------------------------------------------
 
-autocmd BufNewFile *.py,*.rs,*.c,*.cpp,*.h,*.sh,*.java,*.scala,*.vim call SetHead()
-autocmd BufWrite *.py,*.rs,*.c,*.cpp,*.h,*.sh,*.java,*.scala,*.vim call UpdateTime(-1)
+autocmd BufNewFile *.py,*.rs,*.c,*.cpp,*.h,*.sh,*.java,*.scala,*.vim,*.md call SetHead()
+autocmd BufWrite *.py,*.rs,*.c,*.cpp,*.h,*.sh,*.java,*.scala,*.vim,*.md call UpdateTime(-1)
 
 function SetHead()
 
@@ -67,6 +67,19 @@ function SetHead()
 		call setline(6, "\#   Updated at: " . time)
 		call setline(7, "\#   Description:")
 		call setline(8, "\#----------------------------------------------------------")
+	elseif &filetype ==# "markdown"
+		call setline(1, "---")
+		call setline(2, "title: ")
+		call setline(3, "categories:")
+		call setline(4, "  - ")
+		call setline(5, "tags:")
+		call setline(6, "  - ")
+		call setline(7, "date: " . time)
+		call setline(8, "updated: ". time)
+		call setline(9, "toc: true")
+		call setline(10, "mathjax: true")
+		call setline(11, "description: ")
+		call setline(12, "---")
 	endif
 endfunction
 
