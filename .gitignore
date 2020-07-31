@@ -30,3 +30,4 @@ __pycache__/
 /todo/todo.txt.bak
 /todo/done.txt
 /todo/.ice_recur_completed
+/todo/ice_recur.txt
