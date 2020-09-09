@@ -1,0 +1,97 @@
+{
+    // theme
+    "window.zoomLevel": 1,
+    "editor.fontSize": 15,
+    "editor.renderControlCharacters": true,
+    "editor.renderWhitespace": "boundary",
+    "editor.minimap.enabled": false,
+    "workbench.colorTheme": "Dracula Soft",
+    "workbench.sideBar.location": "left",
+    "workbench.activityBar.visible": true,
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#444444",
+        "statusBar.noFolderBackground": "#444444",
+        "statusBar.debuggingBackground": "#444444"
+    },
+
+    // terminal
+    "terminal.integrated.inheritEnv": false,
+    "terminal.integrated.fontSize": 15,
+
+    // python setting
+    "python.pythonPath": "/home/xyy15926/.conda/envs/pysci/bin/python",
+    "python.terminal.activateEnvironment": true,
+    "python.dataScience.sendSelectionToInteractiveWindow": true,
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.enabled": true,
+    "python.analysis.openFilesOnly": false,
+
+    // git setting
+    "git.ignoreMissingGitWarning": true,
+
+    // vim plugin setting
+    "vim.easymotion": true,
+    "vim.surround": true,
+    "vim.sneak": false,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.leader": ";",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [";", ",", "e"],
+            "after": ["6", "0", "|"]
+        }
+    ],
+    "vim.insertModeKeyBindingsNonRecursive": [
+        {
+            "before": ["K", "K"],
+            "after": ["<ESC>"]
+        },{
+            "before": [";", "/"], 
+            "after": ["<ESC>", "A"]
+        },{
+            "before": ["；", "/"], 
+            "after": ["<ESC>", "A"]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": ["K", "K"],
+            "after": ["<ESC>"]
+        }
+    ],
+    "vim.handleKeys": {
+        "<C-j>": false,
+        "<C-S-e>": false,
+        "<C-S-f>": false,
+        "<C-S-g>": false,
+        "<C-S-d>": false,
+        "<C-S-x>": false
+    },
+    "vim.statusBarColorControl": true,
+    "vim.statusBarColors.normal": "#444444",
+    "vim.statusBarColors.insert": "#BF616A",
+    "vim.statusBarColors.visual": "#B48EAD",
+    "vim.statusBarColors.visualline": "#B48EAD",
+    "vim.statusBarColors.visualblock": "#A3BE8C",
+    "vim.statusBarColors.replace": "#D08770",
+
+    // leetcode plugin setting
+    "leetcode.endpoint": "leetcode-cn",
+    "leetcode.workspaceFolder": "c:\\Users\\xyy15926\\Code\\leetcode",
+    "leetcode.defaultLanguage": "python3",
+    "leetcode.hint.configWebviewMarkdown": false,
+    "leetcode.hint.commandShortcut": false,
+    "leetcode.editor.shortcuts": [
+        "submit",
+        "test",
+        "solution",
+        "description"
+    ],
+    "leetcode.enableStatusBar": false,
+    "leetcode.hint.commentDescription": false,
+    "leetcode.hint.setDefaultLanguage": false
+}
