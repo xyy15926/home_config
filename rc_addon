@@ -17,15 +17,20 @@
 #fi
 
 # set cli prompt
-user_name="\[\033[0;36m\]\u"
-time_24="\[\033[1;31m\]\t"
-pc_name="\[\033[1;34m\]\h"
-dir_base="\[\033[0;33m\]\W"
-dir_name="\[\033[0;32m\]\w"
-director_char="\[\033[1;32m\]\$"
-input_content="\[\033[0;37m\]"
-title="\[\e]0;openSUSE Leap 15.0 \u@\h: \w\a\]"
-PS1=$title$input_content[$user_name@\ $dir_base$input_content]$director_char$input_content\ 
+# PS1='`a=$?;if [ $a -ne 0 ]; then a="  "$a; echo -ne "\[\e[1A\e[$((COLUMNS-2))G\e[31m\e[1;41m${a:(-3)}\]\[\e[0m\e[7m\e[2m\r\n\]";fi`${debian_chroot:+($debian_chroot)}\[\e[1;33m\]\u\[\e[1;31m\]@\[\e[1;35m\]\h\[\e[1;32m\][\t]\[\e[1;31m\]:\[\e[1;36m\]\w\[\e[1;34m\]\$\[\e[0;39m\]'
+user_name="\[\033[0;36m\]\u"				# user name with specified color
+time_24="\[\033[1;31m\]\t"					# time with specified color
+pc_name="\[\033[1;34m\]\h"					# host name with specified color
+dir_base="\[\033[0;33m\]\W"					# base directory with specified color
+dir_name="\[\033[0;32m\]\w"					# full path with specified color
+director_char="\[\033[1;32m\]\$"			# director char with specified color, `$` here
+input_content="\[\033[0;37m\]"				# base color prefix
+title="\[\e]0;openSUSE Leap 15.0 \u@\h: \w\a\]"		# prompt title
+
+# WITH PROMPT TITLE
+# PS1=$title$input_content[$user_name@\ $dir_base$input_content]$director_char$input_content\ 
+# WITHOUT PROMPT TITLE
+PS1=🍀$input_content[$user_name@\ $dir_base$input_content]$director_char🐶🐻$input_content\ 
 
 # set bash mode
 set -o vi
