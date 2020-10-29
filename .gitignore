@@ -26,6 +26,7 @@ __pycache__/
 # rep diy
 /local/share/
 /vim/bundles/*
+/vim/.vbuf
 /todo/todo.txt
 /todo/todo.txt.bak
 /todo/done.txt
