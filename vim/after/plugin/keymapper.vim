@@ -48,8 +48,7 @@ vnoremap <leader>r :<c-u>'<,'>w !xargs -0 tmux set-buffer<cr><cr><C-b>:selectp -
 	"copy across vim instance within tmux
 vnoremap <leader>y :w! ~/.vim/.vbuf<cr>
 nnoremap <leader>y :r ~/.vim/.vbuf<cr>
-
-	"copy ac
+	"copy across vim instance with tmp-file
 " nnoremap <localleader>r :<c-u>'<,'>w !xargs -0 tmux set-buffer<cr>
 
 iabbrev @1 xyy15926@163.com
