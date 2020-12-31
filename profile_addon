@@ -32,7 +32,7 @@ alias du="du -h -d 1"
 alias vims="vim -S"
 alias g++="g++ -std=c++11"
 alias useradd="useradd -m -s /bin/bash"
-alias tmux="tmux -S /tmp/tmux"
+# alias tmux="tmux -S /tmp/tmux"
 
 # shadowsocks config setting
 alias ssstart="$HOME/.conda/envs/ssr/bin/sslocal -c $HOME/files/ssr/client.json -d start --pid-file=$HOME/files/ssr/ssr.pid --log-file=$HOME/files/ssr/ss.log"
@@ -87,7 +87,7 @@ export PATH="/opt/miniconda3/bin:$PATH"
 CONDA_CHANGEPS1=false conda activate pysci
 
 # set python package-searching path
-export PYTHONPATH="$HOME/Code/pyutils:$PYTHONPATH"
+export PYTHONPATH="$HOME/Code:$PYTHONPATH"
 # set pythonstartup
 # export PYTHONSTARTUP="$HOME/Code/home_config/python/python_startup.py"
 
