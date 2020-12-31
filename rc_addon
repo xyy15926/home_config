@@ -35,3 +35,15 @@ PS1=🍀$input_content[$user_name@\ $dir_base$input_content]$director_char🐶�
 # set bash mode
 set -o vi
 
+# Tmux setting with `$USE_TMUX`(from WSL-terminal)
+[[ -z "$TMUX" && -n "$USE_TMUX" ]] && {
+    [[ -n "$ATTACH_ONLY" ]] && {
+        tmux a 2>/dev/null || {
+            cd && exec tmux
+        }
+        exit
+    }
+    tmux new-window -c "$PWD" 2>/dev/null && exec tmux a
+    exec tmux
+}
+
