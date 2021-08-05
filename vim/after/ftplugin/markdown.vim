@@ -11,6 +11,8 @@ if exists("b:md_ftplugin")
 	finish
 	"stop execute following commands in the vimscripts
 endif
+let g:indentLine_conceallevel = 0
+	"restore this to 0 to reveal symbols such as * in mds
 let b:md_ftplugin = 1
 	"avoid executing the same plugin twice for the same
 	"buffer, when using `:edit` command without arguments

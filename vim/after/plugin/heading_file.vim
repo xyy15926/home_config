@@ -3,12 +3,12 @@
 "   Name: heading_file.vim
 "   Author: xyy15926
 "   Created at: 2018-05-20 15:30:37
-"   Updated at: 2020-07-20 12:53:44
+"   Updated at: 2021-07-16 09:50:23
 "   Description: vim-scripts for auto-adding file information
 "----------------------------------------------------------
 
 autocmd BufNewFile *.py,*.rs,*.c,*.cpp,*.h,*.sh,*.java,*.scala,*.vim,*.md call SetHead()
-autocmd BufWrite *.py,*.rs,*.c,*.cpp,*.h,*.sh,*.java,*.scala,*.vim,*.md call UpdateTime(-1)
+autocmd BufWritePost,FileWritePost *.py,*.rs,*.c,*.cpp,*.h,*.sh,*.java,*.scala,*.vim,*.md call UpdateTime(-1)
 
 function SetHead()
 
@@ -83,18 +83,29 @@ function SetHead()
 	endif
 endfunction
 
+" Description: Update `Updated at` / `updated`
+" Params:
+" @lineno: line number to start with for searching
 function UpdateTime(lineno)
 	let update_time = strftime("%Y-%m-%d %H:%M:%S")
 	let lineno = 6
-		"this depends on your formation
 	if a:lineno != -1
 		lineno = a:lineno
 	endif
 
-	let line = getline(lineno)
-	if line[4:] =~ "Updated"
-		call setline(lineno, line[:3] . "Updated at: " . update_time)
-			"set line with original formation
-	endif
+	while lineno < 100
+		let line = getline(lineno)
+		" For most code file
+		if line[4:] =~ "Updated"
+			call setline(lineno, line[:3] . "Updated at: " . update_time)
+			break
+		" For markdown file
+		elseif line =~ "updated"
+			call setline(lineno, "updated: " . update_time)
+			break
+		else
+			let lineno += 1
+		endif
+	endwhile
 endfunction
 

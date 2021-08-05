@@ -42,7 +42,7 @@ onoremap in( :<c-u>normal! f(vi(<cr>
 onoremap il( :<c-u>normal! F)vi(<cr>
 	"select content in current parentheses, if in a
 	"parentheses, or next
-nnoremap <leader><localleader>e  60\|
+nnoremap <leader><localleader>e  70\|
 	"jump to column 60, which should be the maxium length
 vnoremap <leader>r :<c-u>'<,'>w !xargs -0 tmux set-buffer<cr><cr><C-b>:selectp -t
 	"copy across vim instance within tmux

@@ -106,6 +106,9 @@ set listchars=tab:»∙,trail:-,precedes:?,extends:?,eol:«
 	"'›': <>1>
 	"'∗': <*->
 	"
+set breakindent
+set showbreak=››››
+	"set break indent in wrapped line, and how to display
 set scrolloff=5
 	"position(lines-count) where to begin scrolling off
 set wrap
@@ -214,6 +217,9 @@ Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'othree/html5.vim'
 Plug 'othree/xml.vim'
+Plug 'Yggdroot/indentLine'
+Plug 'jpalardy/vim-slime', { 'for': 'python' }
+Plug 'hanschen/vim-ipython-cell', { 'for': 'python' }
 call plug#end()
 
 "nerdtree settings
@@ -339,7 +345,15 @@ let g:tagbar_type_scala = {
 " inoremap <c-j> <Plug>snipMateNextOrTrigger
 "}}}
 
-" vim-jsx setting
+" Vim-jsx setting
 let g:jsx_ext_required = 0
 
+" IndentLine setting
+let g:indentLine_enable = 0
+let g:indentLine_concealcursor = 'inc'
+let g:indentLine_conceallevel = 2
+let g:indentLine_setColors = 1
+let g:indentLine_color_term = 24
+" let g:indentLine_char = '|'
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 "}}}
