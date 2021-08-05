@@ -27,6 +27,7 @@ __pycache__/
 /local/share/
 /vim/bundles/*
 /vim/.vbuf
+/vim/view
 /todo/todo.txt
 /todo/todo.txt.bak
 /todo/done.txt
